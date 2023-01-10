@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState, useEffect, useContext } from "react"
 import finnHub from "../apis/finnHub"
 import { SearchListContext } from "../context/searchListContext"
