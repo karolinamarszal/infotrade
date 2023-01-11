@@ -26,9 +26,9 @@ export const StockData = ({symbol}) => {
     return () => (isFixed = false);
   }, [symbol])
 
-  return <div>
+  return <div style={{marginLeft: "20px"}}>
     {stockData && (
-      <div className="row border bg-white rounded shadow-sm p-4 mt-5">
+      <div className="row border bg-white rounded shadow-sm p-4 mt-5 d-flex flex-column align-items-center">
         <div className="col">
           <div>
             <span className="fw-bold">name: </span>
