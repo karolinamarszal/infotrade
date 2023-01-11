@@ -6,3 +6,13 @@
 .table-row:hover .delete-button {
   visibility: visible;
 }
+
+.btn-nav {
+  background-color: transparent;
+  border: none;
+  transition: all ease-in-out 200ms;
+}
+
+.btn-nav:hover {
+  background-color: rgba(0,0,0, 0.1);
+}
