@@ -5,9 +5,10 @@ import { NavBar } from "./components/NavBar"
 import "./App.css";
 import { SearchListContextProvider } from "./context/searchListContext";
 
+
 function App() {
   return (
-    <div>
+    <div className="background-img">
       <NavBar />
       <main className="container">
         <SearchListContextProvider>
