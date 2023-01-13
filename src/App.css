@@ -16,3 +16,20 @@
 .btn-nav:hover {
   background-color: rgba(0,0,0, 0.1);
 }
+
+.background-img {
+  position: relative;
+  isolation: isolate;
+}
+
+.background-img::after {
+  content: "";
+  position: absolute; 
+  z-index: -1;
+  inset: 0;
+  opacity: .10;
+
+  background-image: url("./images/buildings.jpg");
+  background-size: "cover";
+  background-position: center; 
+}
