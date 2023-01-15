@@ -72,9 +72,9 @@ export const InfoPageDetails = () => {
     fetchData()
   }, [symbol])
 
-  return <div>
+  return <div className="d-flex justify-content-center">
     {chartData && (
-      <div className="d-flex flex-row align-items-center">
+      <div className="d-flex flex-row align-items-center" style={{width: "1000px"}}>
         <StockChart chartData={chartData} symbol={symbol} />
         <StockData symbol={symbol} />
       </div>
