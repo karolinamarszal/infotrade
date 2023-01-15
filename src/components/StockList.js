@@ -7,7 +7,7 @@ import { SearchListContext } from "../context/searchListContext"
 export const StockList = () => {
 
   const [stock, setStock] = useState([])
-  const {searchList, deleteCompany} = useContext(SearchListContext)
+  const { searchList, deleteCompany } = useContext(SearchListContext)
   const navigate = useNavigate()
 
   const changeColor = (change) => {
@@ -21,15 +21,16 @@ export const StockList = () => {
   useEffect(() => {
     let isFixed = true
     const fetchData = async () => {
-      const responses = []
       try {
-        const responses = await Promise.all(searchList.map((stock) => {
+        const promises = searchList.map((stock) => {
           return finnHub.get("/quote", {
             params: {
               symbol: stock
             }
           })
-        }))
+        });
+        console.log(promises)
+        const responses = await Promise.all(promises);
 
         const data = responses.map((response) => {
           return {
@@ -38,12 +39,11 @@ export const StockList = () => {
           }
         })
 
-        console.log(data)
         if (isFixed) {
           setStock(data)
         }
       } catch (err) {
-
+          console.error(err)
       }
     }
     fetchData()
@@ -57,7 +57,7 @@ export const StockList = () => {
   }
 
   return <div>
-    <table className="table hover mt-5">
+    <table className="table hover mt-5 bg-light shadow">
       <thead style={{color: "rgb(78,89,102)"}}>
         <tr>
           <th scope="col">Name</th>
