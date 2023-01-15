@@ -6,7 +6,7 @@ import { AutoComplete } from "../components/AutoComplete";
 export const InfoPageMain = () => {
   return <div>
     <div className="text-center">
-      <img src={infotradeimg} style={{width: "15%"}} alt="tradeimg"/>
+      <img src={infotradeimg} style={{width: "15%", marginTop: "20px"}} alt="tradeimg"/>
     </div>
     <AutoComplete />
     <StockList />
