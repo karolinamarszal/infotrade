@@ -8,18 +8,18 @@ import { SearchListContextProvider } from "./context/searchListContext";
 
 function App() {
   return (
-    <div className="background-img">
-      <NavBar />
-      <main className="container">
-        <SearchListContextProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<InfoPageMain />} />
-              <Route path="/detail/:symbol" element={<InfoPageDetails />} />
-            </Routes>
-          </BrowserRouter>
-        </SearchListContextProvider>
-      </main>
+    <div className="background-img" style={{height: "100vh"}}>
+      <BrowserRouter>
+        <NavBar />
+          <main className="container">
+            <SearchListContextProvider>
+                <Routes>
+                  <Route path="/" element={<InfoPageMain />} />
+                  <Route path="/detail/:symbol" element={<InfoPageDetails />} />
+                </Routes>
+            </SearchListContextProvider>
+          </main>
+        </BrowserRouter>
     </div>
     );
 }
