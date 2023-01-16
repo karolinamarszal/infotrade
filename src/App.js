@@ -4,13 +4,25 @@ import {InfoPageDetails} from "./pages/InfoPageDetails"
 import { NavBar } from "./components/NavBar"
 import "./App.css";
 import { SearchListContextProvider } from "./context/searchListContext";
+import { ThemeContextProvider } from "./context/themeContext";
+import MainLayout from "./components/MainLayout";
+
 
 
 function App() {
+
+
+
+
+
+
+
+  
   return (
-    <div className="background-img" style={{height: "100vh"}}>
-      <BrowserRouter>
-        <NavBar />
+    <ThemeContextProvider>
+      <MainLayout>
+        <BrowserRouter>
+          <NavBar />
           <main className="container">
             <SearchListContextProvider>
                 <Routes>
@@ -20,7 +32,8 @@ function App() {
             </SearchListContextProvider>
           </main>
         </BrowserRouter>
-    </div>
+      </MainLayout>
+    </ThemeContextProvider>
     );
 }
 
