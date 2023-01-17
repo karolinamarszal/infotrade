@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom"
-import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs"
+import { BsFillCaretDownFill, BsFillCaretUpFill, BsFileEarmarkExcel } from "react-icons/bs"
 import finnHub from "../apis/finnHub"
 import {useState, useEffect, useContext} from "react"
 import { SearchListContext } from "../context/searchListContext"
+import React, {useRef} from 'react';
+import { DownloadTableExcel } from 'react-export-table-to-excel';
 
 export const StockList = () => {
-
+  const tableRef = useRef();
   const [stock, setStock] = useState([])
   const { searchList, deleteCompany } = useContext(SearchListContext)
   const navigate = useNavigate()
@@ -57,8 +59,8 @@ export const StockList = () => {
   }
 
   return <div>
-    <table className="table hover mt-5 bg-light shadow">
-      <thead style={{color: "rgb(78,89,102)"}}>
+    <table ref={tableRef} className="table hover shadow table-background">
+      <thead className="text">
         <tr>
           <th scope="col">Name</th>
           <th scope="col">Last</th>
@@ -70,7 +72,7 @@ export const StockList = () => {
           <th scope="col">Pclose</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className="text">
         {stock.map((stockData) => {
           return (
             <tr style={{cursor: "pointer"}} onClick={() => handleStockSelect(stockData.symbol)} className="table-row" key={stockData.symbol}>
@@ -81,7 +83,7 @@ export const StockList = () => {
               <td>{stockData.data.h}</td>
               <td>{stockData.data.l}</td>
               <td>{stockData.data.o}</td>
-              <td>{stockData.data.pc} <button className="btn btn-danger btn-sm ml-3 d-inline-block delete-button" onClick={(e) => {
+              <td>{stockData.data.pc} <button className="btn btn-danger btn-sm ml-5 d-inline-block delete-button" onClick={(e) => {
                 e.stopPropagation()
                 deleteCompany(stockData.symbol)
               }}>Remove</button></td>
@@ -91,5 +93,14 @@ export const StockList = () => {
 
       </tbody>
     </table>
+    <DownloadTableExcel
+      filename="Stocks table"
+      sheet="Stock list"
+      currentTableRef={tableRef.current}
+    >
+
+        <button className="excel-btn">Excel export<span></span><BsFileEarmarkExcel /> </button>
+
+    </DownloadTableExcel>
   </div>
 }
