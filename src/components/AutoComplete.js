@@ -57,11 +57,11 @@ export const AutoComplete = () => {
 
   return <div className="w-50 p-5 rounded mx-auto">
     <div className="form-floating dropdown">
-      <input id="search" type="text" className="form-control"
+      <input id="search" type="text" className="form-control text"
       placeholder="Search" autoComplete="off" value={search}
       onChange={(e) =>
       setSearch(e.target.value)}></input>
-      <label htmlFor="search">Search</label>
+      <label className="label" htmlFor="search">Search</label>
       {renderDropdown()}
     </div>
   </div>
