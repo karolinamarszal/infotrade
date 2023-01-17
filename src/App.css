@@ -1,7 +1,69 @@
+:root {
+  --text-primary: black;
+  --background-color-input: rgba(145, 158, 171, 0.7);
+  --background-color: rgba(248, 249, 250);
+  --thead-color: rgb(78,89,102);
+  --opacity: 0.1;
+  --hover-color: rgba(248, 249, 250, 0.5);
+  --chart-background-color: rgba(248, 249, 250);
+}
+
+[data-theme='dark'] {
+  --text-primary: white;
+  --background-color-input: rgba(107, 105, 105);
+  --background-color: rgba(77, 75, 75);
+  --thead-color: rgba(248, 249, 250);
+  --opacity: 0.3;
+  --hover-color: rgba(77, 75, 75, 0.6);
+  --chart-background-color: rgba(219, 220, 221, 0.9);
+}
+
 .delete-button {
   visibility: hidden;
   display: inline-block;
 }
+
+#search {
+  background-color: var(--background-color-input);
+}
+
+.label {
+  color: var(--text-primary);
+}
+
+.table-background {
+  background-color: var(--background-color);
+}
+
+.chart-background {
+  background-color: var(--chart-background-color);
+}
+
+.text, .text:focus {
+  color: var(--thead-color);
+}
+
+.nav {
+  height: 50px;
+  background-color: var(--background-color);
+}
+
+.export-table {
+  visibility: hidden;
+}
+
+.home {
+  height: 50px;
+  color: var(--text-primary);
+}
+
+
+.switch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 
 .table-row:hover .delete-button {
   visibility: visible;
@@ -27,9 +89,49 @@
   position: absolute; 
   z-index: -1;
   inset: 0;
-  opacity: .10;
+  opacity: var(--opacity);
 
   background-image: url("./images/buildings.jpg");
   background-size: "cover";
   background-position: center; 
+}
+
+.excel-btn {
+  color: rgba(248, 249, 250);
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #27ae60;
+  border-radius: 12px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 7px 13px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.excel-btn span {
+  margin-left: 5px;
+}
+
+.excel-btn:hover {
+  background-color: #1e8449;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
 }
