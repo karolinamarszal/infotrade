@@ -1,8 +1,5 @@
 # Infotrade
-<img src="https://user-images.githubusercontent.com/106275517/213272274-5b537252-2c6d-46ea-bc0d-ea1ae4628196.jpg" width="200">
-<img src="https://user-images.githubusercontent.com/106275517/213272304-44e51f3c-e309-49bc-8391-4b7f0293da6e.jpg" width="200">
-<img src="https://user-images.githubusercontent.com/106275517/213272323-9b7c2f01-3613-46ba-b128-baad57a97cdd.jpg" width="400">
-<img src="https://user-images.githubusercontent.com/106275517/213272340-7947c5ce-fd4d-4158-b9a5-3e42ba5d9357.jpg" width="400">
+<img src="https://user-images.githubusercontent.com/106275517/213272274-5b537252-2c6d-46ea-bc0d-ea1ae4628196.jpg" width="400"> <img src="https://user-images.githubusercontent.com/106275517/213272304-44e51f3c-e309-49bc-8391-4b7f0293da6e.jpg" width="400"> <img src="https://user-images.githubusercontent.com/106275517/213272323-9b7c2f01-3613-46ba-b128-baad57a97cdd.jpg" width="400"> <img src="https://user-images.githubusercontent.com/106275517/213272340-7947c5ce-fd4d-4158-b9a5-3e42ba5d9357.jpg" width="400">
           
 ![Infotrade_light](https://user-images.githubusercontent.com/106275517/213272274-5b537252-2c6d-46ea-bc0d-ea1ae4628196.jpg)
 ![Infotrade_dark](https://user-images.githubusercontent.com/106275517/213272304-44e51f3c-e309-49bc-8391-4b7f0293da6e.jpg)
