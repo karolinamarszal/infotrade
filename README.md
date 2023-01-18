@@ -41,6 +41,4 @@ npm start
 
 [Finnhub Stock](https://finnhub.io/ 'Finnhub Stock') (Finnhub Stock API)
 
-[React Icons] (https://react-icons.github.io/react-icons/ 'React Icons') (React Icons)
-
-[Some elements based on the Stock Trading App by Sanjeev Thiyagarajan]
+Some elements based on the Stock Trading App by Sanjeev Thiyagarajan
